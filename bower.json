@@ -2,11 +2,21 @@
   "name": "packery-angular",
   "description": "AngularJS module for Packery",
   "main": "dist/packery-angular.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "Dilatorily"
   ],
   "license": "MIT",
+  "ignore": [
+      ".*",
+      "src",
+      "test",
+      "bower.json",
+      "CONTRIBUTING.md",
+      "gulpfile.js",
+      "karma.conf.js",
+      "package.json"
+  ],
   "keywords": [
     "AngularJS",
     "Packery",
