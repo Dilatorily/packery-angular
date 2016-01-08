@@ -1,0 +1,142 @@
+{
+    "disallowEmptyBlocks": {
+        "allExcept": ["comments"]
+    },
+    "disallowKeywordsOnNewLine": ["else"],
+    "disallowMixedSpacesAndTabs": true,
+    "disallowMultipleLineBreaks": true,
+    "disallowMultipleLineStrings": true,
+    "disallowMultipleSpaces": true,
+    "disallowNamedUnassignedFunctions": true,
+    "disallowNewlineBeforeBlockStatements": true,
+    "disallowPaddingNewlinesInBlocks": true,
+    "disallowQuotedKeysInObjects": true,
+    "disallowSpaceAfterObjectKeys": true,
+    "disallowSpaceAfterPrefixUnaryOperators": true,
+    "disallowSpaceBeforeComma": true,
+    "disallowSpaceBeforePostfixUnaryOperators": true,
+    "disallowSpaceBeforeSemicolon": true,
+    "disallowSpacesInCallExpression": true,
+    "disallowSpacesInFunctionDeclaration": {
+        "beforeOpeningRoundBrace": true
+    },
+    "disallowSpacesInsideBrackets": true,
+    "disallowSpacesInsideParentheses": true,
+    "disallowTabs": true,
+    "disallowTrailingComma": true,
+    "disallowTrailingWhitespace": true,
+    "disallowUnusedParams": true,
+    "disallowYodaConditions": true,
+
+    "jsDoc": {
+        "checkAnnotations": "jsdoc3",
+        "checkParamExistence": true,
+        "checkParamNames": true,
+        "requireParamTypes": true,
+        "checkRedundantParams": true,
+        "checkReturnTypes": true,
+        "checkRedundantReturns": true,
+        "requireReturnTypes": true,
+        "checkTypes": true,
+        "checkRedundantAccess": true,
+        "requireNewlineAfterDescription": true,
+        "requireDescriptionCompleteSentence": true,
+        "requireParamDescription": true,
+        "requireReturnDescription": true
+    },
+
+    "requireAnonymousFunctions": {
+        "allExcept": ["declarations"]
+    },
+    "requireBlocksOnNewline": true,
+    "requireCamelCaseOrUpperCaseIdentifiers": true,
+    "requireCommaBeforeLineBreak": true,
+    "requireCurlyBraces": [
+        "if",
+        "else",
+        "for",
+        "while",
+        "do",
+        "try",
+        "catch"
+    ],
+    "requireDotNotation": true,
+    "requireEarlyReturn": true,
+    "requireLineBreakAfterVariableAssignment": true,
+    "requireLineFeedAtFileEnd": true,
+    "requireObjectKeysOnNewLine": true,
+    "requireOperatorBeforeLineBreak": true,
+    "requirePaddingNewLineAfterVariableDeclaration": true,
+    "requirePaddingNewLinesAfterBlocks": {
+        "allExcept": [
+            "inCallExpressions",
+            "inNewExpressions",
+            "inArrayExpressions",
+            "inProperties"
+        ]
+    },
+    "requirePaddingNewLinesAfterUseStrict": true,
+    "requirePaddingNewlinesBeforeKeywords": [
+        "do",
+        "for",
+        "if",
+        "switch",
+        "case",
+        "try",
+        "catch",
+        "finally",
+        "void",
+        "while",
+        "with",
+        "return",
+        "typeof",
+        "function"
+    ],
+    "requirePaddingNewLinesBeforeLineComments": true,
+    "requireParenthesesAroundIIFE": true,
+    "requireSemicolons": true,
+    "requireSpaceAfterBinaryOperators": true,
+    "requireSpaceAfterComma": true,
+    "requireSpaceAfterKeywords": [
+        "do",
+        "for",
+        "if",
+        "else",
+        "switch",
+        "case",
+        "try",
+        "catch",
+        "void",
+        "while",
+        "with",
+        "return",
+        "typeof"
+    ],
+    "requireSpaceAfterLineComment": true,
+    "requireSpaceBeforeBinaryOperators": true,
+    "requireSpaceBeforeBlockStatements": true,
+    "requireSpaceBeforeKeywords": [
+        "else",
+        "while",
+        "catch"
+    ],
+    "requireSpaceBeforeObjectValues": true,
+    "requireSpaceBetweenArguments": true,
+    "requireSpacesInAnonymousFunctionExpression": {
+        "beforeOpeningRoundBrace": true
+    },
+    "requireSpacesInConditionalExpression": true,
+    "requireSpacesInForStatement": true,
+    "requireSpacesInsideObjectBrackets": "all",
+    "requireVarDeclFirst": true,
+
+    "validateCommentPosition": {
+        "position": "above"
+    },
+    "validateIndentation": 4,
+    "validateLineBreaks": "LF",
+    "validateNewlineAfterArrayElements": true,
+    "validateOrderInObjectKeys": "asc",
+    "validateParameterSeparator": ", ",
+    "validateQuoteMarks": "'"
+}
