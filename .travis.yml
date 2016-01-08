@@ -1,0 +1,10 @@
+language: node_js
+
+before_script:
+  - npm install -g gulp
+
+script:
+  - gulp test
+
+after_success:
+  - gulp test:coveralls
