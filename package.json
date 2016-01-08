@@ -5,10 +5,15 @@
   "main": "dist/packery-angular.js",
   "scripts": {
     "test": "gulp test",
-    "preversion": "npm test",
-    "version": "git pull && gulp dist",
+    "preversion": "git pull && npm test",
+    "version": "gulp dist && git add . --all && git commit -m '[CHORE] Generate dist files for the release'",
     "postversion": "git push && git push --tags",
-    "prepublish": "npm version"
+    "prepublish:major": "gulp version:major && npm run version",
+    "publish:major": "npm run publish",
+    "prepublish:minor": "gulp version:minor && npm run version",
+    "publish:minor": "npm run publish",
+    "prepublish:patch": "gulp version:patch && npm run version",
+    "publish:patch": "npm run publish"
   },
   "repository": {
     "type": "git",

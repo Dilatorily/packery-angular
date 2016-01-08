@@ -66,6 +66,6 @@ function version(type) {
             .pipe(gulp.dest('.'))
             .pipe($.git.commit('[CHORE] Bump package version'))
             .pipe($.filter(versions[0]))
-            .pipe($.tagVersion);
+            .pipe($.tagVersion());
     };
 }

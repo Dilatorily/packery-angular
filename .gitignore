@@ -6,3 +6,4 @@ reports
 !.jscsrc
 !.jshintrc
 !.travis.yml
+*.log
