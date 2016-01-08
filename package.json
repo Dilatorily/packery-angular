@@ -6,14 +6,14 @@
   "scripts": {
     "test": "gulp test",
     "preversion": "git pull && npm test",
-    "version": "gulp dist && git add . --all && git commit -m '[CHORE] Generate dist files for the release'",
+    "version": "gulp dist && git commit -am '[CHORE] Generate dist files for the release'",
     "postversion": "git push && git push --tags",
-    "prepublish:major": "gulp version:major && npm run version",
-    "publish:major": "npm run publish",
-    "prepublish:minor": "gulp version:minor && npm run version",
-    "publish:minor": "npm run publish",
-    "prepublish:patch": "gulp version:patch && npm run version",
-    "publish:patch": "npm run publish"
+    "prepublish:major": "npm run version && gulp version:major",
+    "publish:major": "npm publish",
+    "prepublish:minor": "npm run version && gulp version:minor",
+    "publish:minor": "npm publish",
+    "prepublish:patch": "npm run version && gulp version:patch",
+    "publish:patch": "npm publish"
   },
   "repository": {
     "type": "git",
