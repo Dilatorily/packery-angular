@@ -82,11 +82,7 @@
                     registerDraggableItem(element);
                 }
 
-                $scope.$emit($paEvents.ITEM.ADDED, {
-                    element: element,
-                    hash: hash,
-                    packery: self.packery
-                });
+                $scope.$emit($paEvents.ITEM.ADDED, hash, self.packery, element);
                 refresh();
             });
         }
@@ -95,11 +91,7 @@
             initialized.then(function () {
                 if (!isDestroying) {
                     self.packery.remove(element);
-                    $scope.$emit($paEvents.ITEM.DESTROYED, {
-                        element: element,
-                        hash: hash,
-                        packery: self.packery
-                    });
+                    $scope.$emit($paEvents.ITEM.DESTROYED, hash, self.packery, element);
                     refresh();
                 }
             });
@@ -110,11 +102,7 @@
                 isDestroying = true;
                 initialized.then(function () {
                     self.packery.destroy();
-                    $scope.$emit($paEvents.DESTROYED, {
-                        event: event,
-                        hash: hash,
-                        packery: self.packery
-                    });
+                    $scope.$emit($paEvents.DESTROYED, hash, self.packery, event);
                 });
             });
         }
@@ -152,10 +140,7 @@
 
         function initializePackery() {
             self.packery = new Packery($element[0], $scope.options);
-            $scope.$emit($paEvents.INITIALIZED, {
-                hash: hash,
-                packery: self.packery
-            });
+            $scope.$emit($paEvents.INITIALIZED, hash, self.packery);
             configureDraggable();
             registerPackeryEvents();
             deferred.resolve();
@@ -173,32 +158,16 @@
 
             function registerPackeryEvents() {
                 self.packery.on($paEvents.PACKERY.LAYOUT_COMPLETED, function (items) {
-                    $scope.$emit($paEvents.LAYOUT_COMPLETED, {
-                        hash: hash,
-                        laidOutItems: items,
-                        packery: self.packery
-                    });
+                    $scope.$emit($paEvents.LAYOUT_COMPLETED, hash, self.packery, items);
                 });
                 self.packery.on($paEvents.PACKERY.DRAGGED, function (item) {
-                    $scope.$emit($paEvents.DRAGGED, {
-                        draggedItem: item,
-                        hash: hash,
-                        packery: self.packery
-                    });
+                    $scope.$emit($paEvents.DRAGGED, hash, self.packery, item);
                 });
                 self.packery.on($paEvents.PACKERY.FITTED, function (item) {
-                    $scope.$emit($paEvents.FITTED, {
-                        hash: hash,
-                        item: item,
-                        packery: self.packery
-                    });
+                    $scope.$emit($paEvents.FITTED, hash, self.packery, item);
                 });
                 self.packery.on($paEvents.PACKERY.REMOVED, function (items) {
-                    $scope.$emit($paEvents.REMOVED, {
-                        hash: hash,
-                        packery: self.packery,
-                        removedItems: items
-                    });
+                    $scope.$emit($paEvents.REMOVED, hash, self.packery, items);
                 });
             }
         }
