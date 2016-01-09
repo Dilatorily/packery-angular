@@ -13,7 +13,8 @@
     "prepublish:minor": "npm run version && gulp version:minor",
     "publish:minor": "npm publish",
     "prepublish:patch": "npm run version && gulp version:patch",
-    "publish:patch": "npm publish"
+    "publish:patch": "npm publish",
+    "postpublish": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
