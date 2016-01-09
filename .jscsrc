@@ -83,7 +83,6 @@
         "switch",
         "case",
         "try",
-        "catch",
         "finally",
         "void",
         "while",
