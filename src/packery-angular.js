@@ -75,7 +75,7 @@
                 if ($scope.isAppended) {
                     self.packery.appended(element);
                 } else {
-                    self.packery.preprended(element);
+                    self.packery.prepended(element);
                 }
 
                 if ($scope.draggabilly.isDraggable) {
@@ -93,7 +93,7 @@
 
         function remove(element) {
             initialized.then(function () {
-                if (isDestroying) {
+                if (!isDestroying) {
                     self.packery.remove(element);
                     $scope.$emit($paEvents.ITEM.DESTROYED, {
                         element: element,
