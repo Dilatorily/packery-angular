@@ -44,6 +44,18 @@
             expect(element).toBeDefined();
         });
 
+        it('should work as an element directive', function () {
+            var element;
+
+            try {
+                element = $compile('<div pa-packery><pa-packery-item></pa-packery-item></div>')($scope);
+            } catch (error) {
+                expect(error).toBeUndefined();
+            }
+
+            expect(element).toBeDefined();
+        });
+
         it('should add the packery item to the paPackery controller if the packery is initialized', function () {
             var element;
             var controller;

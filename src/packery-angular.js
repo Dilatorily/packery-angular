@@ -237,8 +237,7 @@
     function PackeryItemDirective() {
         return {
             link: link,
-            require: '^paPackery',
-            restrict: 'A'
+            require: '^paPackery'
         };
 
         function link(scope, element, attributes, controller) {
