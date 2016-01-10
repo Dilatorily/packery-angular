@@ -75,10 +75,6 @@ function docs() {
     return gulp.src(sources)
         .pipe($.ngdocs.process({
             html5Mode: false,
-            scripts: [
-                'http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js',
-                'http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'
-            ],
             startPage: '/api/packery-angular',
             titleLink: 'https://github.com/Dilatorily/packery-angular'
         }))
