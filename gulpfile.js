@@ -16,6 +16,8 @@ gulp.task('test:unit', unit);
 gulp.task('test:coveralls', coveralls);
 
 gulp.task('dist', dist);
+gulp.task('dist:minimize', minimize);
+gulp.task('dist:docs', docs);
 
 gulp.task('version:major', version('major'));
 gulp.task('version:minor', version('minor'));
@@ -51,12 +53,36 @@ function coveralls() {
         .pipe($.coveralls());
 }
 
-function dist() {
-    gulp.src(sources)
+function dist(done) {
+    runSequence(
+        [
+            'dist:minimize',
+            'dist:docs'
+        ],
+        done
+    );
+}
+
+function minimize() {
+    return gulp.src(sources)
         .pipe(gulp.dest('dist'))
         .pipe($.uglify())
         .pipe($.rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist'));
+}
+
+function docs() {
+    return gulp.src(sources)
+        .pipe($.ngdocs.process({
+            html5Mode: false,
+            scripts: [
+                'http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js',
+                'http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'
+            ],
+            startPage: '/api/packery-angular',
+            titleLink: 'https://github.com/Dilatorily/packery-angular'
+        }))
+        .pipe(gulp.dest('docs'));
 }
 
 function version(type) {
