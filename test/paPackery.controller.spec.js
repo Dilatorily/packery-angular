@@ -49,7 +49,6 @@
             expect($scope.options).toEqual({
                 columnWidth: 1,
                 itemSelector: '.pa-item',
-                percentPosition: false,
                 rowHeight: 1,
                 stamp: '.pa-stamp'
             });
@@ -69,7 +68,6 @@
                 isAppended: false,
                 isDraggable: false,
                 itemSelector: 'test item selector',
-                percentPosition: true,
                 rowHeight: 1000,
                 stamp: 'test stamp'
             };
@@ -85,7 +83,6 @@
             expect($scope.options).toEqual({
                 columnWidth: 2,
                 itemSelector: 'test item selector',
-                percentPosition: true,
                 rowHeight: 1000,
                 stamp: 'test stamp'
             });
@@ -115,7 +112,6 @@
                 columnWidth: 1,
                 foo: 'bar',
                 itemSelector: '.pa-item',
-                percentPosition: false,
                 rowHeight: 1,
                 stamp: '.pa-stamp'
             });
@@ -161,9 +157,9 @@
 
                 controller = $controller('paPackery', {
                     $element: $element,
-                    $scope: $scope,
-                    Draggabilly: Draggabilly,
-                    Packery: Packery
+                    $paDraggabilly: Draggabilly,
+                    $paPackery: Packery,
+                    $scope: $scope
                 });
             });
 
