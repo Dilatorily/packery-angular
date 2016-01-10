@@ -1,0 +1,34 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><div class="packery-angular-page"><h2 id="packery-angular" id="packery-angular">packery-angular</h2>
+<p>The packery-angular module contains all of the functionalities of the
+packery-angular project. To use it, this module must be imported to your
+project to expose the directives that are available to you.</p>
+<p>There are also some angular constants that are used internally, but that are
+exposed in this module.</p>
+<p>This module depends on the <code>Draggabilly</code> and <code>Packery</code> libraries to work
+properly.</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html ng-app="app"&gt;
+  &lt;head&gt;
+    &lt;!-- Include the necessary libraries --&gt;
+    &lt;script src="js/angular.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/draggabilly.pkgd.min.js.js"&gt;&lt;/script&gt;
+    &lt;script src="js/packery.pkgd.min.js.js"&gt;&lt;/script&gt;
+
+    &lt;!-- Include the packery-angular script --&gt;
+    &lt;script src="js/packery-angular.min.js"&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+      // Add 'packery-angular' as a dependency
+      var app = angular.module('app', ['packery-angular']);
+    &lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div></div>
