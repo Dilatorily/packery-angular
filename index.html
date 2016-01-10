@@ -40,16 +40,13 @@
       
         addTag('script', {src: 'js/marked.js'}, sync);
       
-        addTag('script', {src: 'http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js'}, sync);
-      
-        addTag('script', {src: 'http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'}, sync);
+        addTag('script', {src: 'js/prettify.js'}, sync);
       
       
       addTag('script', {src: 'js/angular-bootstrap.js'}, sync);
       addTag('script', {src: 'js/angular-bootstrap-prettify.js'}, sync);
       addTag('script', {src: 'js/docs-setup.js'}, sync);
       addTag('script', {src: 'js/docs.js'}, sync);
-      addTag('script', {src: 'js/prettify.js'}, sync);
       
       function addTag(name, attributes, sync) {
         var el = document.createElement(name),

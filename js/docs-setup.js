@@ -82,8 +82,7 @@ NG_DOCS={
       "js/angular.min.js",
       "js/angular-animate.min.js",
       "js/marked.js",
-      "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js",
-      "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"
+      "js/prettify.js"
     ],
     "styles": [],
     "title": "API Documentation",
@@ -96,7 +95,8 @@ NG_DOCS={
     "loadDefaults": {
       "angular": true,
       "angularAnimate": true,
-      "marked": true
+      "marked": true,
+      "prettify": true
     }
   },
   "html5Mode": false,
@@ -106,7 +106,6 @@ NG_DOCS={
     "js/angular.min.js",
     "js/angular-animate.min.js",
     "js/marked.js",
-    "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js",
-    "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"
+    "js/prettify.js"
   ]
 };
