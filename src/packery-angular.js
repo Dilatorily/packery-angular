@@ -2,8 +2,8 @@
     'use strict';
 
     angular.module('packery-angular', [])
-        .constant('Draggabilly', Draggabilly)
-        .constant('Packery', Packery)
+        .constant('$paDraggabilly', Draggabilly)
+        .constant('$paPackery', Packery)
         .constant('$paOptions', $OptionsConstant())
         .constant('$paEvents', $EventsConstant())
         .controller('paPackery', PackeryController)
@@ -17,7 +17,6 @@
             isAppended: true,
             isDraggable: true,
             itemSelector: '.pa-item',
-            percentPosition: false,
             rowHeight: 1,
             stamp: '.pa-stamp'
         };
@@ -49,13 +48,22 @@
         '$element',
         '$q',
         '$timeout',
-        'Packery',
-        'Draggabilly',
+        '$paPackery',
+        '$paDraggabilly',
         '$paEvents',
         '$paOptions'
     ];
 
-    function PackeryController($scope, $element, $q, $timeout, Packery, Draggabilly, $paEvents, $paOptions) {
+    function PackeryController(
+        $scope,
+        $element,
+        $q,
+        $timeout,
+        Packery,
+        Draggabilly,
+        $paEvents,
+        $paOptions
+    ) {
         var self = this;
         var deferred = $q.defer();
         var initialized = deferred.promise;
