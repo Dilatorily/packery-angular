@@ -27,11 +27,8 @@
     "globals"
   ],
   "dependencies": {
-    "angular": "^1.4.8",
-    "draggabilly": "^2.0.1",
-    "packery": "^1.4.3"
-  },
-  "resolutions": {
-    "get-size": "^2.0.2"
+    "angular": "^1.5.0",
+    "draggabilly": "^2.1.0",
+    "packery": "^2.0.0"
   }
 }
