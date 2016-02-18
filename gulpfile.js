@@ -66,7 +66,7 @@ function dist(done) {
 function minimize() {
     return gulp.src(sources)
         .pipe(gulp.dest('dist'))
-        .pipe($.uglify())
+        .pipe($.uglify({ preserveComments: 'license' }))
         .pipe($.rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist'));
 }
