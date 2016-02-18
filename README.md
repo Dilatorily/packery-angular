@@ -12,9 +12,9 @@ Installation is easy since packery-angular has minimal dependencies.
 ### Requirements
 This module requires the following libraries to be already installed:
 
-  - `angular@1.4.8`
-  - `draggabilly@2.0.1`
-  - `packery@1.4.3`
+  - `angular@1.5.0`
+  - `draggabilly@2.1.0`
+  - `packery@2.0.0`
 
 ### Install using NPM
 
