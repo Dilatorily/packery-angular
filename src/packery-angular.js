@@ -1,3 +1,8 @@
+/*!
+ * packery-angular v0.0.3 (http://dilatorily.github.io/packery-angular)
+ * Copyright 2016 Dilatorily
+ * Licensed under the MIT license
+ */
 (function (angular, Draggabilly, Packery) {
     'use strict';
 
