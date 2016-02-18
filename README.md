@@ -58,11 +58,11 @@ This module exposes a couple of directives to simplify the usage of the [`Packer
 
 ### HTML
 ```html
-<ul pa-packery="options">
-    <li pa-packery-item>Sample item 1</li>
-    <li pa-packery-item>Sample item 2</li>
-    <li pa-packery-item>Sample item 3</li>
-</ul>
+<pa-packery pa-options="options">
+    <pa-packery-item>Sample item 1</pa-packery-item>
+    <pa-packery-item>Sample item 2</pa-packery-item>
+    <pa-packery-item>Sample item 3</pa-packery-item>
+</pa-packery>
 ```
 
 ### JavaScript
