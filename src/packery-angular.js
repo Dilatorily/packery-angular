@@ -1,5 +1,5 @@
 /*!
- * packery-angular v0.1.0 (http://dilatorily.github.io/packery-angular)
+ * packery-angular v1.0.0 (http://dilatorily.github.io/packery-angular)
  * Copyright 2016 Dilatorily
  * Licensed under the MIT license
  */
@@ -554,7 +554,7 @@
      * The `pa-packery` directive marks a HTML element to contain the
      * [`Packery`](http://packery.metafizzy.co/) instance.
      *
-     * @param {Object=} paPackery The [options](http://packery.metafizzy.co/options.html)
+     * @param {Object=} paOptions The [options](http://packery.metafizzy.co/options.html)
      * object that should be passed to the `Packery` instance to configure it.
      *
      * A couple more attributes are used to configure the behaviour of the

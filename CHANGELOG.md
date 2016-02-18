@@ -1,3 +1,10 @@
+# [1.0.0](https://github.com/Dilatorily/packery-angular/compare/v0.1.0...v1.0.0) (2016-02-18)
+
+This version is the initial release.
+
+Breaking Changes:
+  - The `Packery` options are now passed in the `pa-options` attribute instead of the `pa-packery` attribute.
+
 ## [0.1.0](https://github.com/Dilatorily/packery-angular/compare/v0.0.4...v0.1.0) (2016-02-18)
 
 This version updates the dependencies to their latest versions.
