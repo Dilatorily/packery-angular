@@ -24,7 +24,7 @@
             var element;
 
             try {
-                element = $compile('<div pa-packery-item></div>')($scope);
+                element = $compile('<pa-packery-item></pa-packery-item>')($scope);
             } catch (error) {
                 expect(error).toBeDefined();
             }
@@ -36,7 +36,7 @@
             var element;
 
             try {
-                element = $compile('<div pa-packery><div pa-packery-item></div></div>')($scope);
+                element = $compile('<pa-packery><pa-packery-item></pa-packery-item></pa-packery>')($scope);
             } catch (error) {
                 expect(error).toBeUndefined();
             }
@@ -48,7 +48,19 @@
             var element;
 
             try {
-                element = $compile('<div pa-packery><pa-packery-item></pa-packery-item></div>')($scope);
+                element = $compile('<pa-packery><pa-packery-item></pa-packery-item></pa-packery>')($scope);
+            } catch (error) {
+                expect(error).toBeUndefined();
+            }
+
+            expect(element).toBeDefined();
+        });
+
+        it('should work as an attribute directive', function () {
+            var element;
+
+            try {
+                element = $compile('<pa-packery><div pa-packery-item></div></pa-packery>')($scope);
             } catch (error) {
                 expect(error).toBeUndefined();
             }
@@ -61,7 +73,7 @@
             var controller;
 
             $scope.toggle = false;
-            element = $compile('<div pa-packery><div ng-if="toggle" pa-packery-item></div></div>')($scope);
+            element = $compile('<pa-packery><pa-packery-item ng-if="toggle"></pa-packery-item></pa-packery>')($scope);
             $scope.$digest();
             controller = element.controller('paPackery');
             expect(controller.packery).toBeUndefined();
@@ -83,7 +95,7 @@
             var controller;
 
             $scope.toggle = false;
-            element = $compile('<div pa-packery><div ng-if="toggle" pa-packery-item></div></div>')($scope);
+            element = $compile('<pa-packery><pa-packery-item ng-if="toggle"></pa-packery-item></pa-packery>')($scope);
             $scope.$digest();
             controller = element.controller('paPackery');
             expect(controller.packery).toBeUndefined();
@@ -100,7 +112,7 @@
             var element;
             var controller;
 
-            element = $compile('<div pa-packery><div pa-packery-item></div></div>')($scope);
+            element = $compile('<pa-packery><pa-packery-item></pa-packery-item></pa-packery>')($scope);
             $scope.$digest();
             controller = element.controller('paPackery');
 

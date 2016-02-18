@@ -17,16 +17,16 @@
             ]);
         });
 
-        it('should not be used as an element directive', function () {
+        it('should be used as an element directive', function () {
             var element;
             var controller;
 
             element = $compile('<pa-packery></pa-packery>')($scope);
             $scope.$digest();
-            expect(element[0].outerHTML).toBe('<pa-packery class="ng-scope"></pa-packery>');
+            expect(element[0].outerHTML).toBe('<pa-packery class="ng-scope ng-isolate-scope"></pa-packery>');
 
             controller = element.controller('paPackery');
-            expect(controller).toBeUndefined();
+            expect(controller).toBeDefined();
         });
 
         it('should be used as an attribute directive', function () {
@@ -46,7 +46,7 @@
             var scope;
 
             $scope.options = { foo: 'bar' };
-            element = $compile('<div pa-packery="options"></div>')($scope);
+            element = $compile('<pa-packery pa-options="options"></pa-packery>')($scope);
             $scope.$digest();
 
             scope = element.isolateScope();
