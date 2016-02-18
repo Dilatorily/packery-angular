@@ -392,12 +392,11 @@
 
             function configureDraggable() {
                 var children = $element[0].children;
-                var i;
 
                 if ($scope.draggabilly.isDraggable) {
-                    for (i = 0; i < children.length; ++i) {
-                        registerDraggableItem(children[i]);
-                    }
+                    angular.forEach(children, function (child) {
+                        registerDraggableItem(child);
+                    });
                 }
             }
 
