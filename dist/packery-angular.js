@@ -1,5 +1,5 @@
 /*!
- * packery-angular v0.1.0 (http://dilatorily.github.io/packery-angular)
+ * packery-angular v1.0.0 (http://dilatorily.github.io/packery-angular)
  * Copyright 2016 Dilatorily
  * Licensed under the MIT license
  */
@@ -548,13 +548,13 @@
     /**
      * @ngdoc directive
      * @name packery-angular.directive:paPackery
-     * @restrict A
+     * @restrict EA
      *
      * @description
      * The `pa-packery` directive marks a HTML element to contain the
      * [`Packery`](http://packery.metafizzy.co/) instance.
      *
-     * @param {Object=} paPackery The [options](http://packery.metafizzy.co/options.html)
+     * @param {Object=} paOptions The [options](http://packery.metafizzy.co/options.html)
      * object that should be passed to the `Packery` instance to configure it.
      *
      * A couple more attributes are used to configure the behaviour of the
@@ -572,7 +572,7 @@
      * directive in the template.
      *
      * <pre>
-     * <ul pa-packery="options">...</ul>
+     * <pa-packery pa-options="options">...</pa-packery>
      * </pre>
      *
      * The following JavaScript code should be located in the corresponding
@@ -593,9 +593,9 @@
     function PackeryDirective() {
         return {
             controller: 'paPackery',
-            restrict: 'A',
+            restrict: 'EA',
             scope: {
-                packery: '=?paPackery'
+                packery: '<?paOptions'
             }
         };
     }
@@ -614,9 +614,9 @@
      * directive in the template.
      *
      * <pre>
-     * <ul pa-packery>
-     *     <li pa-packery-item>...</li>
-     * </ul>
+     * <pa-packery>
+     *     <pa-packery-item>...</pa-packery-item>
+     * </pa-packery>
      * </pre>
      */
     PackeryItemDirective.$inject = [
@@ -626,7 +626,8 @@
     function PackeryItemDirective() {
         return {
             link: link,
-            require: '^paPackery'
+            require: '^paPackery',
+            restrict: 'EA'
         };
 
         function link(scope, element, attributes, controller) {
