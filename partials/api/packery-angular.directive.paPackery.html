@@ -3,9 +3,45 @@
 </span>
 </div>
 </h1>
-<div><h2 id="usage">Usage</h2>
-<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY pa-packery&gt;
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="packery-angular-directive-page packery-angular-directive-papackery-page"><p>The <code>pa-packery</code> directive marks a HTML element to contain the
+<a href="http://packery.metafizzy.co/"><code>Packery</code></a> instance.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY pa-packery="{Object}"&gt;
    ...
 &lt;/ANY&gt;</pre>
-</div>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>paPackery <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-directive-page packery-angular-directive-papackery-page"><p>The <a href="http://packery.metafizzy.co/options.html">options</a>
+object that should be passed to the <code>Packery</code> instance to configure it.</p>
+<p>A couple more attributes are used to configure the behaviour of the
+<code>Packery</code> instance.</p>
+<ul>
+<li><code>paPackery.isAppended</code>: Configures if new <code>packery-item</code> are appended or prepended</li>
+<li><code>paPackery.isDraggable</code>: Configures if <code>packery-item</code> are draggable</li>
+</ul>
+<p>One more attribute can be used to configure <code>Draggabilly</code>:</p>
+<ul>
+<li><code>paPackery.dragSelector</code>: Corresponds to the <a href="http://draggabilly.desandro.com/#handle"><code>handle</code></a> option from <code>Draggabilly</code></li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="packery-angular-directive-page packery-angular-directive-papackery-page"><p>The following HTML code shows the usage of the <code>pa-packery</code>
+directive in the template.</p>
+<pre class="prettyprint linenums">
+&lt;ul pa-packery="options"&gt;...&lt;/ul&gt;
+</pre>
+<p>The following JavaScript code should be located in the corresponding
+controller for the template shown above.</p>
+<pre class="prettyprint linenums">
+$scope.options = {
+    columnWidth: 1,
+    dragSelector: '',
+    isAppended: true,
+    isDraggable: true,
+    itemSelector: '.pa-item',
+    rowHeight: 1,
+    stamp: '.pa-stamp'
+};
+</pre>
+</div></div>
 </div>

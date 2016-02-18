@@ -3,62 +3,131 @@
 </span>
 </div>
 </h1>
-<div><div class="member event"><h2 id="events">Events</h2>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="packery-angular-controller-page packery-angular-controller-papackery-page"><p>The <code>paPackery</code> controller contains all the logic to manage a
+<code>packery-angular</code> instance. It wraps the
+<a href="http://packery.metafizzy.co/"><code>Packery</code></a> instance and exposes an API to
+add and remove <code>Packery</code> items.</p>
+<p>This controller also wraps and extends the native <code>Packery</code> events.
+Those events are emitted them through the <code>$rootScope</code>.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ng.$scope">$scope</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$element">$element</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$q">$q</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$timeout">$timeout</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/packery-angular.constant:$paPackery">$paPackery</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/packery-angular.constant:$paDraggabilly">$paDraggabilly</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/packery-angular.constant:$paEvents">$paEvents</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/packery-angular.constant:$paOptions">$paOptions</a></code>
+</li>
+</ul>
+<div class="member event"><h2 id="events">Events</h2>
 <ul class="events"><li><h3 id="events_$padestroyed">$paDestroyed</h3>
-<div class="$padestroyed"><div class="inline"><h4 id="events_$padestroyed_type">Type:</h4>
+<div class="$padestroyed"><div class="packery-angular-controller-page packery-angular-controller-papackery-padestroyed-page"><p>This event is fired when the <code>Packery</code> instance
+associated with the <code>paPackery</code> controller is destroyed.</p>
+</div><div class="inline"><h4 id="events_$padestroyed_type">Type:</h4>
 <div class="type">emit</div>
 </div>
 <div class="inline"></div>
-</div>
+<h5 id="events_$padestroyed_type_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hash</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-padestroyed-page"><p>The unique hash of the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>packery</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-padestroyed-page"><p>The <code>Packery</code> instance associated with the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>event</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-padestroyed-page"><p>The <code>$destroy</code> event that triggered this event</p>
+</div></td></tr></tbody></table></div>
 </li>
 <li><h3 id="events_$padragitempositioned">$paDragItemPositioned</h3>
-<div class="$padragitempositioned"><div class="inline"><h4 id="events_$padragitempositioned_type">Type:</h4>
+<div class="$padragitempositioned"><div class="packery-angular-controller-page packery-angular-controller-papackery-padragitempositioned-page"><p>This event is fired when the <a href="http://packery.metafizzy.co/events.html#dragitempositioned"><code>dragItemPositioned</code></a>
+event is fired by the <code>Packery</code> instance associated with
+the <code>paPackery</code> controller.</p>
+</div><div class="inline"><h4 id="events_$padragitempositioned_type">Type:</h4>
 <div class="type">emit</div>
 </div>
 <div class="inline"></div>
-</div>
+<h5 id="events_$padragitempositioned_type_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hash</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-padragitempositioned-page"><p>The unique hash of the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>packery</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-padragitempositioned-page"><p>The <code>Packery</code> instance associated with the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>items</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-padragitempositioned-page"><p>The item broadcasted from the <code>Packery</code> event</p>
+</div></td></tr></tbody></table></div>
 </li>
 <li><h3 id="events_$pafitcomplete">$paFitComplete</h3>
-<div class="$pafitcomplete"><div class="inline"><h4 id="events_$pafitcomplete_type">Type:</h4>
+<div class="$pafitcomplete"><div class="packery-angular-controller-page packery-angular-controller-papackery-pafitcomplete-page"><p>This event is fired when the <a href="http://packery.metafizzy.co/events.html#fitcomplete"><code>fitComplete</code></a>
+event is fired by the <code>Packery</code> instance associated with
+the <code>paPackery</code> controller.</p>
+</div><div class="inline"><h4 id="events_$pafitcomplete_type">Type:</h4>
 <div class="type">emit</div>
 </div>
 <div class="inline"></div>
-</div>
+<h5 id="events_$pafitcomplete_type_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hash</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-pafitcomplete-page"><p>The unique hash of the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>packery</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-pafitcomplete-page"><p>The <code>Packery</code> instance associated with the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>items</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-pafitcomplete-page"><p>The item broadcasted from the <code>Packery</code> event</p>
+</div></td></tr></tbody></table></div>
 </li>
 <li><h3 id="events_$painitialized">$paInitialized</h3>
-<div class="$painitialized"><div class="inline"><h4 id="events_$painitialized_type">Type:</h4>
+<div class="$painitialized"><div class="packery-angular-controller-page packery-angular-controller-papackery-painitialized-page"><p>This event is fired when the <code>Packery</code> instance
+associated with the <code>paPackery</code> controller is initialized.</p>
+</div><div class="inline"><h4 id="events_$painitialized_type">Type:</h4>
 <div class="type">emit</div>
 </div>
 <div class="inline"></div>
-</div>
+<h5 id="events_$painitialized_type_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hash</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-painitialized-page"><p>The unique hash of the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>packery</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-painitialized-page"><p>The <code>Packery</code> instance associated with the <code>paPackery</code> controller</p>
+</div></td></tr></tbody></table></div>
 </li>
 <li><h3 id="events_$paitemadded">$paItemAdded</h3>
-<div class="$paitemadded"><div class="inline"><h4 id="events_$paitemadded_type">Type:</h4>
+<div class="$paitemadded"><div class="packery-angular-controller-page packery-angular-controller-papackery-paitemadded-page"><p>This event is fired when a <a href="#/api/packery-angular.directive:paPackeryItem"><code>packery-item</code></a>
+is added to the <code>Packery</code> instance.</p>
+</div><div class="inline"><h4 id="events_$paitemadded_type">Type:</h4>
 <div class="type">emit</div>
 </div>
 <div class="inline"></div>
-</div>
+<h5 id="events_$paitemadded_type_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hash</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-paitemadded-page"><p>The unique hash of the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>packery</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-paitemadded-page"><p>The <code>Packery</code> instance associated with the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>element</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-paitemadded-page"><p>The <code>packery-item</code> element that has been added</p>
+</div></td></tr></tbody></table></div>
 </li>
 <li><h3 id="events_$paitemdestroyed">$paItemDestroyed</h3>
-<div class="$paitemdestroyed"><div class="inline"><h4 id="events_$paitemdestroyed_type">Type:</h4>
+<div class="$paitemdestroyed"><div class="packery-angular-controller-page packery-angular-controller-papackery-paitemdestroyed-page"><p>This event is fired when a <a href="#/api/packery-angular.directive:paPackeryItem"><code>packery-item</code></a>
+is destroyed from the <code>Packery</code> instance.</p>
+</div><div class="inline"><h4 id="events_$paitemdestroyed_type">Type:</h4>
 <div class="type">emit</div>
 </div>
 <div class="inline"></div>
-</div>
+<h5 id="events_$paitemdestroyed_type_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hash</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-paitemdestroyed-page"><p>The unique hash of the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>packery</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-paitemdestroyed-page"><p>The <code>Packery</code> instance associated with the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>element</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-paitemdestroyed-page"><p>The <code>packery-item</code> element that has been destroyed</p>
+</div></td></tr></tbody></table></div>
 </li>
 <li><h3 id="events_$palayoutcomplete">$paLayoutComplete</h3>
-<div class="$palayoutcomplete"><div class="inline"><h4 id="events_$palayoutcomplete_type">Type:</h4>
+<div class="$palayoutcomplete"><div class="packery-angular-controller-page packery-angular-controller-papackery-palayoutcomplete-page"><p>This event is fired when the <a href="http://packery.metafizzy.co/events.html#layoutcomplete"><code>layoutComplete</code></a>
+event is fired by the <code>Packery</code> instance associated with
+the <code>paPackery</code> controller.</p>
+</div><div class="inline"><h4 id="events_$palayoutcomplete_type">Type:</h4>
 <div class="type">emit</div>
 </div>
 <div class="inline"></div>
-</div>
+<h5 id="events_$palayoutcomplete_type_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hash</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-palayoutcomplete-page"><p>The unique hash of the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>packery</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-palayoutcomplete-page"><p>The <code>Packery</code> instance associated with the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>items</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-palayoutcomplete-page"><p>The items broadcasted from the <code>Packery</code> event</p>
+</div></td></tr></tbody></table></div>
 </li>
 <li><h3 id="events_$paremovecomplete">$paRemoveComplete</h3>
-<div class="$paremovecomplete"><div class="inline"><h4 id="events_$paremovecomplete_type">Type:</h4>
+<div class="$paremovecomplete"><div class="packery-angular-controller-page packery-angular-controller-papackery-paremovecomplete-page"><p>This event is fired when the <a href="http://packery.metafizzy.co/events.html#removecomplete"><code>removeComplete</code></a>
+event is fired by the <code>Packery</code> instance associated with
+the <code>paPackery</code> controller.</p>
+</div><div class="inline"><h4 id="events_$paremovecomplete_type">Type:</h4>
 <div class="type">emit</div>
 </div>
 <div class="inline"></div>
-</div>
+<h5 id="events_$paremovecomplete_type_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hash</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-paremovecomplete-page"><p>The unique hash of the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>packery</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-paremovecomplete-page"><p>The <code>Packery</code> instance associated with the <code>paPackery</code> controller</p>
+</div></td></tr><tr><td>items</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="packery-angular-controller-page packery-angular-controller-papackery-paremovecomplete-page"><p>The items broadcasted from the <code>Packery</code> event</p>
+</div></td></tr></tbody></table></div>
 </li>
 </ul>
 </div>

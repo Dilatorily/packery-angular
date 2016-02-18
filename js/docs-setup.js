@@ -27,7 +27,8 @@ NG_DOCS={
       "shortName": "$paEvents",
       "type": "object",
       "moduleName": "packery-angular",
-      "keywords": "api constant object packery-angular"
+      "shortDescription": "This service is an AngularJS constant that corresponds to all of the",
+      "keywords": "$padestroyed $padragitempositioned $pafitcomplete $painitialized $paitemadded $paitemdestroyed $palayoutcomplete $paremovecomplete angularjs api constant controller corresponds dragitempositioned events events_ fired fitcomplete follow html layoutcomplete library list listened metafizzy object packery packery-angular removecomplete service"
     },
     {
       "section": "api",
@@ -35,8 +36,8 @@ NG_DOCS={
       "shortName": "$paOptions",
       "type": "object",
       "moduleName": "packery-angular",
-      "shortDescription": "This service is an AngularJS constant that correspond to the default",
-      "keywords": "add angularjs api appending behavior columnwidth constant control correspond default desandro draggabilly draggable dragselector follow handle html instances isappended isdraggable itemselector metafizzy object option options pa-item pa-stamp packery packery-angular prepending properties_columnwidth properties_dragselector properties_isappended properties_isdraggable properties_itemselector properties_rowheight properties_stamp property rowheight service stamp toggle true values"
+      "shortDescription": "This service is an AngularJS constant that corresponds to the default",
+      "keywords": "add angularjs api appending behavior columnwidth constant control corresponds default desandro draggabilly draggable dragselector follow handle html instances isappended isdraggable itemselector metafizzy object option options pa-item pa-stamp packery packery-angular prepending properties_columnwidth properties_dragselector properties_isappended properties_isdraggable properties_itemselector properties_rowheight properties_stamp property rowheight service stamp toggle true values"
     },
     {
       "section": "api",
@@ -53,7 +54,8 @@ NG_DOCS={
       "shortName": "paPackery",
       "type": "controller",
       "moduleName": "packery-angular",
-      "keywords": "api controller packery-angular"
+      "shortDescription": "The paPackery controller contains all the logic to manage a",
+      "keywords": "$element $q $rootscope $scope $timeout add api constant controller emitted events exposes extends instance items logic manage metafizzy native packery packery-angular papackery remove wraps"
     },
     {
       "section": "api",
@@ -61,7 +63,8 @@ NG_DOCS={
       "shortName": "paPackery",
       "type": "directive",
       "moduleName": "packery-angular",
-      "keywords": "api directive packery-angular"
+      "shortDescription": "The pa-packery directive marks a HTML element to contain the",
+      "keywords": "$scope api appended attribute attributes behaviour code columnwidth configure configures controller corresponding corresponds couple desandro directive draggabilly draggable dragselector element handle html instance isappended isdraggable itemselector javascript located marks metafizzy object option options pa-item pa-packery pa-stamp packery packery-angular packery-item papackery passed prepended rowheight stamp template true usage"
     },
     {
       "section": "api",
@@ -69,7 +72,8 @@ NG_DOCS={
       "shortName": "paPackeryItem",
       "type": "directive",
       "moduleName": "packery-angular",
-      "keywords": "api directive packery-angular"
+      "shortDescription": "The pa-packery-item directive marks a HTML element to contain an item",
+      "keywords": "api code directive ea element html instance item marks metafizzy pa-packery pa-packery-item packery packery-angular template usage"
     }
   ],
   "apis": {
