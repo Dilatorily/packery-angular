@@ -45,18 +45,18 @@
             var element;
             var scope;
 
-            $scope.options = 'test options';
+            $scope.options = { foo: 'bar' };
             element = $compile('<div pa-packery="options"></div>')($scope);
             $scope.$digest();
 
             scope = element.isolateScope();
-            expect(scope.packery).toBe('test options');
+            expect(scope.packery).toEqual({ foo: 'bar' });
 
-            $scope.options = 'test new options';
-            expect(scope.packery).toBe('test options');
+            $scope.options = { foo: 'new bar' };
+            expect(scope.packery).toEqual({ foo: 'bar' });
 
             $scope.$digest();
-            expect(scope.packery).toBe('test new options');
+            expect(scope.packery).toEqual({ foo: 'new bar' });
         });
     });
 }(window.angular));
