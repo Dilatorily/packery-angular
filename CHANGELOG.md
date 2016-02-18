@@ -1,3 +1,7 @@
+## [0.1.0](https://github.com/Dilatorily/packery-angular/compare/v0.0.4...v0.1.0) (2016-02-18)
+
+This version updates the dependencies to their latest versions.
+
 ### [0.0.4](https://github.com/Dilatorily/packery-angular/compare/v0.0.3...v0.0.4) (2016-02-18)
 
 This version contains some bug fixes and an updated documentation from the ngDocs, the generated documentation website and the user guide.
