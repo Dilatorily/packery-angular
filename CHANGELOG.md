@@ -1,6 +1,10 @@
+### [0.0.4](https://github.com/Dilatorily/packery-angular/compare/v0.0.3...v0.0.4) (2016-02-18)
+
+This version contains some bug fixes and an updated documentation from the ngDocs, the generated documentation website and the user guide.
+
 ### [0.0.3](https://github.com/Dilatorily/packery-angular/compare/v0.0.2...v0.0.3) (2016-01-09)
 
-This version some bug fixes and a breaking change with the emitted events. The
+This version contains some bug fixes and a breaking change with the emitted events. The
 0.0.2 release will be deprecated on npm since it does not contains the dist
 files.
 

@@ -84,7 +84,7 @@ Please check the [CHANGELOG.md](CHANGELOG.md) for the list of changes.
 ## [Contributing](CONTRIBUTING.md)
 I am open for modifications on this project. Please check the [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution guidelines.
 
-## License
+## [License](LICENSE)
 This repository is open source and distributed under the MIT License.
 
 Packery is a product of Metafizzy LLC and is distributed under a separate license. Please refer to their [website](http://packery.metafizzy.co/) for information on Packery's license.
