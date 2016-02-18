@@ -64,7 +64,7 @@ NG_DOCS={
       "type": "directive",
       "moduleName": "packery-angular",
       "shortDescription": "The pa-packery directive marks a HTML element to contain the",
-      "keywords": "$scope api appended attribute attributes behaviour code columnwidth configure configures controller corresponding corresponds couple desandro directive draggabilly draggable dragselector ea element handle html instance isappended isdraggable itemselector javascript located marks metafizzy object option options pa-item pa-options pa-packery pa-stamp packery packery-angular packery-item paoptions papackery passed prepended rowheight stamp template true usage"
+      "keywords": "$scope api appended attribute attributes behaviour code columnwidth configure configures controller corresponding corresponds couple desandro directive draggabilly draggable dragselector ea element handle html instance isappended isdraggable itemselector javascript located marks metafizzy object option options pa-item pa-options pa-packery pa-stamp packery packery-angular packery-item paoptions passed prepended rowheight stamp template true usage"
     },
     {
       "section": "api",
