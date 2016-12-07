@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <!-- Include the necessary libraries -->
+        <script src="js/angular.min.js"></script>
+        <script src="js/draggabilly.pkgd.min.js"></script>
+        <script src="js/packery.pkgd.min.js"></script>
+
+        <!-- Include the packery-angular script -->
+        <script src="js/packery-angular.min.js"></script>
+
+        <script src="js/app.js"></script>
+    </head>
+    <body ng-controller="AppController">
+        <pa-packery pa-options="options">
+            <pa-packery-item class="pa-item" ng-repeat="item in items" ng-style="item.style">{{item.content}}</pa-packery-item>
+        </pa-packery>
+    </body>
+</html>
