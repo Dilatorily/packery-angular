@@ -1,3 +1,7 @@
+### [1.0.1](https://github.com/Dilatorily/packery-angular/compare/v1.0.0...v1.0.1) (2017-01-20)
+
+This version renames `$EventsConstant.PACKERY.REMOVE` to `$EventsConstant.PACKERY.REMOVED` and `$EventsConstant.REMOVE` to `$EventsConstant.REMOVED`.
+
 # [1.0.0](https://github.com/Dilatorily/packery-angular/compare/v0.1.0...v1.0.0) (2016-02-18)
 
 This version is the initial release.
