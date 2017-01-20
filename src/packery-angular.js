@@ -246,9 +246,9 @@
                 DRAGGED: 'dragItemPositioned',
                 FITTED: 'fitComplete',
                 LAYOUT_COMPLETED: 'layoutComplete',
-                REMOVE: 'removeComplete'
+                REMOVED: 'removeComplete'
             },
-            REMOVE: '$paRemoveComplete'
+            REMOVED: '$paRemoveComplete'
         };
     }
 
