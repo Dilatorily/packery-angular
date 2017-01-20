@@ -31,34 +31,37 @@
     "url": "https://github.com/Dilatorily/packery-angular/issues"
   },
   "homepage": "https://github.com/Dilatorily/packery-angular#readme",
-  "dependencies": {
+  "peerDependencies": {
     "angular": "^1.5.0",
     "draggabilly": "^2.1.0",
     "packery": "^2.0.0"
   },
   "devDependencies": {
+    "angular": "^1.5.0",
     "angular-mocks": "^1.5.0",
+    "draggabilly": "^2.1.0",
     "gulp": "^3.9.1",
-    "gulp-bump": "^2.4.0",
+    "gulp-bump": "^2.5.1",
     "gulp-coveralls": "^0.1.4",
-    "gulp-filter": "^4.0.0",
-    "gulp-git": "^1.7.0",
+    "gulp-filter": "^5.0.0",
+    "gulp-git": "^1.12.0",
     "gulp-jscs": "^4.0.0",
-    "gulp-jscs-stylish": "^1.3.0",
-    "gulp-jshint": "^2.0.0",
-    "gulp-load-plugins": "^1.2.0",
-    "gulp-ngdocs": "0.3.0",
+    "gulp-jscs-stylish": "^1.4.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-ngdocs": "^0.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-tag-version": "^1.3.0",
     "gulp-uglify": "^2.0.0",
-    "jasmine-core": "^2.4.1",
-    "jshint": "^2.9.1",
-    "jshint-stylish": "^2.1.0",
-    "karma": "^1.2.0",
+    "jasmine-core": "^2.5.2",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "karma": "^1.4.0",
     "karma-coverage": "^1.1.1",
-    "karma-jasmine": "^1.0.2",
-    "karma-phantomjs-launcher": "^1.0.0",
-    "phantomjs-prebuilt": "^2.1.4",
-    "run-sequence": "^1.1.5"
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "packery": "^2.0.0",
+    "phantomjs-prebuilt": "^2.1.14",
+    "run-sequence": "^1.2.2"
   }
 }
