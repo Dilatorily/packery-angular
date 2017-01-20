@@ -246,9 +246,9 @@
                 DRAGGED: 'dragItemPositioned',
                 FITTED: 'fitComplete',
                 LAYOUT_COMPLETED: 'layoutComplete',
-                REMOVE: 'removeComplete'
+                REMOVED: 'removeComplete'
             },
-            REMOVE: '$paRemoveComplete'
+            REMOVED: '$paRemoveComplete'
         };
     }
 
@@ -560,12 +560,12 @@
      * A couple more attributes are used to configure the behaviour of the
      * `Packery` instance.
      *
-     *   - `paPackery.isAppended`: Configures if new `packery-item` are appended or prepended
-     *   - `paPackery.isDraggable`: Configures if `packery-item` are draggable
+     *   - `paOptions.isAppended`: Configures if new `packery-item` are appended or prepended
+     *   - `paOptions.isDraggable`: Configures if `packery-item` are draggable
      *
      * One more attribute can be used to configure `Draggabilly`:
      *
-     *   - `paPackery.dragSelector`: Corresponds to the [`handle`](http://draggabilly.desandro.com/#handle) option from `Draggabilly`
+     *   - `paOptions.dragSelector`: Corresponds to the [`handle`](http://draggabilly.desandro.com/#handle) option from `Draggabilly`
      *
      * @example
      * The following HTML code shows the usage of the `pa-packery`
