@@ -2,7 +2,7 @@
   "name": "packery-angular",
   "description": "AngularJS module for Packery",
   "main": "dist/packery-angular.js",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "authors": [
     "Dilatorily"
   ],
