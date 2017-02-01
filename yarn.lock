@@ -325,9 +325,9 @@ builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
 
-bump-regex@^2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/bump-regex/-/bump-regex-2.5.2.tgz#d68c5a306dd08652061007885183983378e81bf7"
+bump-regex@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/bump-regex/-/bump-regex-2.6.1.tgz#e2dd5d2fb542459c4eef275e0e2df26381f36120"
   dependencies:
     semver "^5.1.0"
     xtend "^4.0.1"
@@ -1263,11 +1263,11 @@ graceful-fs@~1.2.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-gulp-bump@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/gulp-bump/-/gulp-bump-2.5.1.tgz#56fc3733b41285bd2acc072775f2caa7f6f95995"
+gulp-bump@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/gulp-bump/-/gulp-bump-2.6.1.tgz#9d27a9ec0e1b8608c39bb41238a35e860281bb18"
   dependencies:
-    bump-regex "^2.5.2"
+    bump-regex "^2.6.1"
     plugin-error "^0.1.2"
     plugin-log "^0.1.0"
     semver "^5.3.0"
@@ -1289,9 +1289,9 @@ gulp-filter@^5.0.0:
     multimatch "^2.0.0"
     streamfilter "^1.0.5"
 
-gulp-git@^1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/gulp-git/-/gulp-git-1.12.0.tgz#a779573d84a344e46d13ecb67182de8e58fcb7f3"
+gulp-git@^1.13.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/gulp-git/-/gulp-git-1.13.0.tgz#0ab426ded4600dc9b4a134132fd8f7e57f552add"
   dependencies:
     any-shell-escape "^0.1.1"
     gulp-util "^3.0.6"
@@ -1380,16 +1380,16 @@ gulp-tap@^0.1.3:
   dependencies:
     event-stream "~3.1.0"
 
-gulp-uglify@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/gulp-uglify/-/gulp-uglify-2.0.0.tgz#cbe4aae4fe0b6bdd760335bc46f200fff699c4af"
+gulp-uglify@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-uglify/-/gulp-uglify-2.0.1.tgz#e8cfb831014fc9ff2e055e33785861830d499365"
   dependencies:
     gulplog "^1.0.0"
     has-gulplog "^0.1.0"
     lodash "^4.13.1"
     make-error-cause "^1.1.1"
     through2 "^2.0.0"
-    uglify-js "2.7.0"
+    uglify-js "2.7.5"
     uglify-save-license "^0.4.1"
     vinyl-sourcemaps-apply "^0.2.0"
 
@@ -1964,9 +1964,9 @@ karma-phantomjs-launcher@^1.0.2:
     lodash "^4.0.1"
     phantomjs-prebuilt "^2.1.7"
 
-karma@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/karma/-/karma-1.4.0.tgz#bf5edbccabb8579cb68ae699871f3e79608ec94b"
+karma@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/karma/-/karma-1.4.1.tgz#41981a71d54237606b0a3ea8c58c90773f41650e"
   dependencies:
     bluebird "^3.3.0"
     body-parser "^1.12.4"
@@ -3417,7 +3417,7 @@ throttleit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/throttleit/-/throttleit-1.0.0.tgz#9e785836daf46743145a5984b6268d828528ac6c"
 
-through2@0.6.1:
+through2@0.6.1, through2@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/through2/-/through2-0.6.1.tgz#f742b32893e8bd26146e789e4fd2ccb2c07a717e"
   dependencies:
@@ -3438,7 +3438,7 @@ through2@^0.5.0, through2@^0.5.1:
     readable-stream "~1.0.17"
     xtend "~3.0.0"
 
-through2@^0.6.1, through2@^0.6.5:
+through2@^0.6.5:
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-0.6.5.tgz#41ab9c67b29d57209071410e1d7a7a968cd3ad48"
   dependencies:
@@ -3526,9 +3526,9 @@ typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-uglify-js@2.7.0, uglify-js@^2.6:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.7.0.tgz#f021e38ba2ca740860f5bd5c695c2a817345f0ec"
+uglify-js@2.7.5, uglify-js@^2.6:
+  version "2.7.5"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.7.5.tgz#4612c0c7baaee2ba7c487de4904ae122079f2ca8"
   dependencies:
     async "~0.2.6"
     source-map "~0.5.1"
