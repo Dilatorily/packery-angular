@@ -5,7 +5,16 @@
         .controller('AppController', ['$scope', '$timeout', function ($scope, $timeout) {
             var colors = ['red', 'green', 'blue'];
 
-            $scope.items = [];
+            $scope.items = [{
+                content: 'Starting box! More boxes should appear after 2 seconds!',
+                style: {
+                    display: 'inline-block',
+                    width: '200px',
+                    height: '200px',
+                    'background-color': 'black',
+                    color: 'white'
+                }
+            }];
             $scope.options = {
                 columnWidth: 100,
                 isDraggable: true,
@@ -28,7 +37,7 @@
                         'background-color': colors[i % 3],
                         color: colors[(i + 1) % 3]
                     }
-                }, i * 1000);
+                }, 2000 + i * 1000);
             }
 
             function addItem (item, delay) {
