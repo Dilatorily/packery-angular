@@ -1,5 +1,5 @@
 /*!
- * packery-angular v1.0.0 (http://dilatorily.github.io/packery-angular)
+ * packery-angular v1.0.1 (http://dilatorily.github.io/packery-angular)
  * Copyright 2016 Dilatorily
  * Licensed under the MIT license
  */
