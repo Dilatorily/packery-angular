@@ -68,7 +68,7 @@
             expect(element).toBeDefined();
         });
 
-        it('should add the packery item to the paPackery controller if the packery is initialized', function () {
+        it('should add the packery item to the paPackery controller', function () {
             var element;
             var controller;
 
@@ -76,9 +76,6 @@
             element = $compile('<pa-packery><pa-packery-item ng-if="toggle"></pa-packery-item></pa-packery>')($scope);
             $scope.$digest();
             controller = element.controller('paPackery');
-            expect(controller.packery).toBeUndefined();
-
-            $timeout.flush();
             expect(controller.packery).toBeDefined();
 
             spyOn(controller, 'add');
@@ -88,24 +85,6 @@
             $scope.$digest();
             expect(controller.add).toHaveBeenCalled();
             expect(controller.add).toHaveBeenCalledWith(element.children()[0]);
-        });
-
-        it('should not add the packery item to the paPackery controller if the packery is not initialized', function () {
-            var element;
-            var controller;
-
-            $scope.toggle = false;
-            element = $compile('<pa-packery><pa-packery-item ng-if="toggle"></pa-packery-item></pa-packery>')($scope);
-            $scope.$digest();
-            controller = element.controller('paPackery');
-            expect(controller.packery).toBeUndefined();
-
-            spyOn(controller, 'add');
-            $scope.toggle = true;
-            expect(controller.add).not.toHaveBeenCalled();
-
-            $scope.$digest();
-            expect(controller.add).not.toHaveBeenCalled();
         });
 
         it('should remove the packery item from the paPackery controller when the $destroy event is fired', function () {

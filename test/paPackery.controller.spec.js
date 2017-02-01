@@ -12,22 +12,15 @@
         beforeEach(function () {
             module('packery-angular');
             angular.mock.inject([
+                '$compile',
                 '$controller',
                 '$rootScope',
                 '$timeout',
                 '$paEvents',
-                function (_$controller_, $rootScope, _$timeout_, _$paEvents_) {
+                function ($compile, _$controller_, $rootScope, _$timeout_, _$paEvents_) {
                     $controller = _$controller_;
                     $scope = $rootScope.$new();
-                    $element = [
-                        {
-                            children: [
-                                'test child 1',
-                                'test child 2',
-                                'test child 3'
-                            ]
-                        }
-                    ];
+                    $element = $compile('<div><div>test child 1</div><div>test child 2</div><div>test child 3</div></div>')($scope);
                     $timeout = _$timeout_;
                     $paEvents = _$paEvents_;
                 }
@@ -132,6 +125,15 @@
             var on;
             var packeryEvent;
             var packeryCallback;
+            var packeryInstance;
+            var initialize = function ($element, Draggabilly, Packery, $scope) {
+                controller = $controller('paPackery', {
+                    $element: $element,
+                    $paDraggabilly: Draggabilly,
+                    $paPackery: Packery,
+                    $scope: $scope
+                });
+            };
 
             beforeEach(function () {
                 bindDraggabillyEvents = jasmine.createSpy('packery.bindDraggabillyEvents');
@@ -154,13 +156,6 @@
                 jasmine.clock().mockDate(mockedDate);
 
                 $scope.packery = { dragSelector: 'test drag selector' };
-
-                controller = $controller('paPackery', {
-                    $element: $element,
-                    $paDraggabilly: Draggabilly,
-                    $paPackery: Packery,
-                    $scope: $scope
-                });
             });
 
             afterEach(function () {
@@ -168,31 +163,33 @@
             });
 
             it('should initialize a draggable Packery instance', function () {
-                $scope.draggabilly.isDraggable = true;
+                $scope.packery.isDraggable = true;
                 $scope.$on($paEvents.INITIALIZED, function (event, hash, packery) {
+                    packeryInstance = packery;
                     expect(hash).toEqual(mockedDate.getTime());
-                    expect(packery).toBe(controller.packery);
                 });
 
-                $timeout.flush();
+                initialize($element, Draggabilly, Packery, $scope);
+                expect(packeryInstance).toBe(controller.packery);
                 expect(window.Packery).toHaveBeenCalledWith($element[0], $scope.options);
                 expect(Draggabilly).toHaveBeenCalled();
                 expect(Draggabilly.calls.count()).toBe(3);
-                expect(Draggabilly).toHaveBeenCalledWith('test child 1', { handle: 'test drag selector' });
-                expect(Draggabilly).toHaveBeenCalledWith('test child 2', { handle: 'test drag selector' });
-                expect(Draggabilly).toHaveBeenCalledWith('test child 3', { handle: 'test drag selector' });
+                expect(Draggabilly).toHaveBeenCalledWith($element[0].children[0], { handle: 'test drag selector' });
+                expect(Draggabilly).toHaveBeenCalledWith($element[0].children[1], { handle: 'test drag selector' });
+                expect(Draggabilly).toHaveBeenCalledWith($element[0].children[2], { handle: 'test drag selector' });
                 expect(bindDraggabillyEvents).toHaveBeenCalled();
                 expect(bindDraggabillyEvents.calls.count()).toBe(3);
             });
 
             it('should initialize a non-draggable Packery instance', function () {
-                $scope.draggabilly.isDraggable = false;
+                $scope.packery.isDraggable = false;
                 $scope.$on($paEvents.INITIALIZED, function (event, hash, packery) {
+                    packeryInstance = packery;
                     expect(hash).toEqual(mockedDate.getTime());
-                    expect(packery).toEqual(controller.packery);
                 });
 
-                $timeout.flush();
+                initialize($element, Draggabilly, Packery, $scope);
+                expect(packeryInstance).toBe(controller.packery);
                 expect(window.Packery).toHaveBeenCalledWith($element[0], $scope.options);
                 expect(Draggabilly).not.toHaveBeenCalled();
                 expect(bindDraggabillyEvents).not.toHaveBeenCalled();
@@ -206,7 +203,7 @@
                     }
                 });
 
-                $timeout.flush();
+                initialize($element, Draggabilly, Packery, $scope);
                 expect(on).toHaveBeenCalledWith($paEvents.PACKERY.LAYOUT_COMPLETED, packeryCallback);
 
                 $scope.$on($paEvents.LAYOUT_COMPLETED, function (event, hash, packery, items) {
@@ -225,7 +222,7 @@
                     }
                 });
 
-                $timeout.flush();
+                initialize($element, Draggabilly, Packery, $scope);
                 expect(on).toHaveBeenCalledWith($paEvents.PACKERY.DRAGGED, packeryCallback);
 
                 $scope.$on($paEvents.DRAGGED, function (event, hash, packery, items) {
@@ -244,7 +241,7 @@
                     }
                 });
 
-                $timeout.flush();
+                initialize($element, Draggabilly, Packery, $scope);
                 expect(on).toHaveBeenCalledWith($paEvents.PACKERY.FITTED, packeryCallback);
 
                 $scope.$on($paEvents.FITTED, function (event, hash, packery, items) {
@@ -263,7 +260,7 @@
                     }
                 });
 
-                $timeout.flush();
+                initialize($element, Draggabilly, Packery, $scope);
                 expect(on).toHaveBeenCalledWith($paEvents.PACKERY.REMOVED, packeryCallback);
 
                 $scope.$on($paEvents.REMOVED, function (event, hash, packery, items) {
@@ -276,7 +273,7 @@
 
             describe('and a successful Packery initialization', function () {
                 beforeEach(function () {
-                    $timeout.flush();
+                    initialize($element, Draggabilly, Packery, $scope);
                 });
 
                 it('should listen for an AngularJS $destroy event', function () {

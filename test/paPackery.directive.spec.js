@@ -23,7 +23,7 @@
 
             element = $compile('<pa-packery></pa-packery>')($scope);
             $scope.$digest();
-            expect(element[0].outerHTML).toBe('<pa-packery class="ng-scope ng-isolate-scope"></pa-packery>');
+            expect(element[0].outerHTML).toBe('<pa-packery class="ng-scope ng-isolate-scope" style="position: relative; height: 0px;"></pa-packery>');
 
             controller = element.controller('paPackery');
             expect(controller).toBeDefined();
@@ -35,7 +35,7 @@
 
             element = $compile('<div pa-packery></div>')($scope);
             $scope.$digest();
-            expect(element[0].outerHTML).toBe('<div pa-packery="" class="ng-scope ng-isolate-scope"></div>');
+            expect(element[0].outerHTML).toBe('<div pa-packery="" class="ng-scope ng-isolate-scope" style="position: relative; height: 0px;"></div>');
 
             controller = element.controller('paPackery');
             expect(controller).toBeDefined();
