@@ -1,5 +1,5 @@
 /*!
- * packery-angular v1.0.0 (http://dilatorily.github.io/packery-angular)
+ * packery-angular v1.1.0 (http://dilatorily.github.io/packery-angular)
  * Copyright 2016 Dilatorily
  * Licensed under the MIT license
  */
@@ -307,7 +307,7 @@
 
         registerEvents();
         applyDefaultOptions();
-        $timeout(initializePackery);
+        initializePackery();
 
         function add(element) {
             initialized.then(function () {
@@ -631,9 +631,7 @@
         };
 
         function link(scope, element, attributes, controller) {
-            if (controller.packery) {
-                controller.add(element[0]);
-            }
+            controller.add(element[0]);
 
             scope.$on('$destroy', function () {
                 controller.remove(element[0]);
