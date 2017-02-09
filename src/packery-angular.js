@@ -485,7 +485,7 @@
                      *
                      * @param {number} hash The unique hash of the `paPackery` controller
                      * @param {Object} packery The `Packery` instance associated with the `paPackery` controller
-                     * @param {Object} items The item broadcasted from the `Packery` event
+                     * @param {Object} item The item broadcasted from the `Packery` event
                      */
                     $scope.$emit($paEvents.DRAGGED, hash, self.packery, item);
                 });
